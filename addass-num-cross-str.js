@@ -1,8 +1,9 @@
 // experimental conditions
+//     str += str
 //     str += num 
 //     num += str 
 //     num += num
-//     str += str
+
 
 // pass all tests without using "+=" in your blocks
 
@@ -18,6 +19,8 @@ let actual = "1";
 actual += "1";
 console.assert(str_str === actual, "fail: str_str");
 
+debugger;
+
 str_1 = "1";
 let str_num;
 { // str_1 += 1;
@@ -28,20 +31,25 @@ actual = "1";
 actual += 1;
 console.assert(str_num === actual, "fail: str_num");
 
+debugger;
 
 let num_1 = 1;
 let num_str;
 { // str_1 += "1";
-
+ let Step_1 =  String(num_1)
+ num_str = Step_1 + "1";
 };
 actual = 1;
-actual += "1;"
+actual += "1";
 console.assert(num_str === actual, "fail: num_str");
+
+
+debugger;
 
 num_1 = 1;
 let num_num;
 { // str_1 += 1;
-
+  num_num = num_1 + 1;
 };
 actual = 1;
 actual += 1;
